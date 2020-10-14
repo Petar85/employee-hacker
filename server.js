@@ -69,6 +69,7 @@ const askQ = function () {
 
 askQ();
 
+// allows user to view all departments currently in the database
 function viewalldepartments() {
     connection.query("SELECT * FROM department", function (err, answer) {
         console.log("\n Departments Retrieved from Database \n");
@@ -77,6 +78,7 @@ function viewalldepartments() {
     askQ();
 }
 
+// allows user to view all employee roles currently in the database
 function viewallroles() {
     connection.query("SELECT * FROM role", function (err, answer) {
         console.log("\n Roles Retrieved from Database \n");
@@ -85,6 +87,7 @@ function viewallroles() {
     askQ();
 }
 
+// allows user to view all employees currently in the database
 function viewallemployees() {
     console.log("retrieving employess from database");
     var fancyQuery =
@@ -96,6 +99,7 @@ function viewallemployees() {
     askQ();
 }
 
+// allows user to add a new department into the database
 function addDepartment() {
     inquirer
         .prompt({
@@ -120,6 +124,7 @@ function addDepartment() {
         });
 }
 
+// allows user to add a new role/title
 function addRole() {
     inquirer
         .prompt([
@@ -159,6 +164,7 @@ function addRole() {
 
 }
 
+// allows user to add a new employee to database
 function addEmployee() {
     inquirer
         .prompt([
